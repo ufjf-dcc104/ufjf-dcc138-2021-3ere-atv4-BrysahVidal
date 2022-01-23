@@ -35,6 +35,7 @@ quadro(t)
         this.passo(this.dt);
         this.desenhar();
         this.checaColisao();
+        this.removerSprites();
         this.iniciar();
         this.t0 = t;
     } 
@@ -68,6 +69,14 @@ quadro(t)
 
         if(!this.aRemover.includes(b)){
             this.aRemover.push(b);
+        }
+    }
+    removerSprites(){
+        for (const alvo of this.aRemover) {
+            const i = this.sprites.indexOf(alvo);
+            if(i >= 0){
+                this.sprites.splice(i, 1);
+            }
         }
     }
 }
