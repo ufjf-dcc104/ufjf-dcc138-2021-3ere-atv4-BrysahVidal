@@ -5,6 +5,8 @@ export default class Cena {
         this.canvas = canvas;
         this.ctx = canvas.getContext("2d");
         this.sprites = [];
+        this.t0 = 0;
+        this.dt = 0;
     }
     desenhar() {
         this.ctx.fillStyle = "grey";
@@ -18,4 +20,10 @@ export default class Cena {
     adicionar(sprite) {
         this.sprites.push(sprite);
     }
+    passo(dt)
+    {
+for (const sprite of this.sprites) {
+    sprite.passo(dt);
+}
 } 
+}
