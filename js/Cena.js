@@ -25,5 +25,13 @@ export default class Cena {
 for (const sprite of this.sprites) {
     sprite.passo(dt);
 }
-} 
+}
+quadro(t)
+    {
+        this.t0 = this.t0 ?? t;
+        this.dt =  (t - this.t0)/1000;
+        this.passo(this.dt);
+        this.desenhar();
+        this.t0 = t;
+    } 
 }
