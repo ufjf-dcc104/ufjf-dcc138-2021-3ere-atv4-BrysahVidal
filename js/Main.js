@@ -2,6 +2,7 @@ import Cena from "./Cena.js"
 import Sprite from "./Sprite.js";
 import AssetManager from "./AssetManager.js";
 import Mapa from "./Mapa.js";
+import modeloMapa1 from "../maps/mapa1.js";
 
 const assets = new AssetManager();
 assets.carregaImagem("garota", "assets/garota.png");
@@ -14,6 +15,7 @@ const cena1 = new Cena(canvas, assets);
 canvas.width = 14 * 32;
 canvas.height = 10 * 32;
 const mapa1 = new Mapa(10, 14, 32);
+mapa1.carregaMapa(modeloMapa1);
 cena1.configuraMapa(mapa1);
 
 const pc = new Sprite({vx : 10});
