@@ -78,5 +78,6 @@ quadro(t)
                 this.sprites.splice(i, 1);
             }
         }
+        this.aRemover = [];
     }
 }
