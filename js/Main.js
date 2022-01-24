@@ -16,9 +16,9 @@ assets.carregaAudio("boom", "assets/boom.wav");
 
 const canvas = document.querySelector("canvas");
 const cena1 = new Cena(canvas, assets);
-canvas.width = 14 * 32;
-canvas.height = 10 * 32;
-const mapa1 = new Mapa(10, 14, 32);
+canvas.width = 19 * 37;
+canvas.height = 15 * 37;
+const mapa1 = new Mapa(15, 19, 37);
 mapa1.carregaMapa(modeloMapa1);
 cena1.configuraMapa(mapa1);
 
@@ -28,14 +28,7 @@ const en1 = new Sprite({ x: 160, w: -10, color: "red" });
 cena1.adicionar(pc);
 cena1.adicionar(en1);
 cena1.adicionar(new Sprite({ y: 40, w: 30, color: "red" }));
-cena1.adicionar(
-  new Sprite({
-    x: 115,
-    y: 50,
-    vy: -10,
-    color: "green",
-  })
-);
+//cena1.adicionar(new Sprite({ x: 30, y: 50, vy: 10,color: "green"}) );
 
 cena1.iniciar();
 document.addEventListener("keydown", (e) => {
