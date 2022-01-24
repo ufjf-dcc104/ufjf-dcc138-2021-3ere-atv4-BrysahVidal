@@ -22,13 +22,16 @@ const mapa1 = new Mapa(15, 19, 37);
 mapa1.carregaMapa(modeloMapa1);
 cena1.configuraMapa(mapa1);
 
-const pc = new Sprite({ x: 50, vx: 10 });
-const en1 = new Sprite({ x: 160, w: -10, color: "red" });
+const player = new Sprite({ x: 50, vx: 10 });
 
-cena1.adicionar(pc);
-cena1.adicionar(en1);
-cena1.adicionar(new Sprite({ y: 40, w: 30, color: "red" }));
-//cena1.adicionar(new Sprite({ x: 30, y: 50, vy: 10,color: "green"}) );
+
+cena1.adicionar(player);
+cena1.adicionaInimigo(160,200);
+cena1.adicionaInimigo(200,160);
+cena1.adicionaInimigo(80,100);
+cena1.adicionaInimigo(160,400);
+    
+
 
 cena1.iniciar();
 document.addEventListener("keydown", (e) => {

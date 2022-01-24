@@ -1,3 +1,5 @@
+import Sprite from "./Sprite.js";
+
 export default class Cena {
   /* É RESPONSAVEL POR DESENHAR ELEMENTOS NA TELA EM UMA ANIMAÇÃO
    */
@@ -91,4 +93,17 @@ export default class Cena {
     this.mapa = mapa;
     this.mapa.cena = this;
   }
+  adicionaInimigo(xi,yi)
+  {
+    
+    const spriteI = new Sprite(
+        {
+            x: xi ,
+            y: yi , 
+            color : "red"
+        }
+        )
+        this.adicionar(spriteI);
+         
+ }
 }
